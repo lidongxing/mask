@@ -48,3 +48,7 @@ or
   [1, 1, 0]]
   The number of rows is the token number of target sequence.
   
+  The last attention point is that dot product between querys and keys multiply zero mask firstly and then add the -inf attention before softmax operation.
+  score *= score_mask     #score is the dot product, *score_mask is to delete the padding function
+  score += ((score_mask-1) * 1e+10) # add -inf is to delete the "0" attention function between tokens in softmax operation
+  
