@@ -20,13 +20,13 @@ or
   
   2. encoder self-attention mask
   attention mask is square matric.
-  such as: 'I like <pad>'.
+  such as: 'I like [pad]'.
   self-attention mask is :
   [[1, 1, 0],
   [1, 1, 0],
   [0, 0, 0]]
   3. decoder masked attention is a square matric = padding mask & low-triangle matric
-  such as: 'I like <pad>'.
+  such as: 'I like [pad]'.
   low-triangle:
   [[1, 0, 0],
   [1, 1, 0],
@@ -40,7 +40,7 @@ or
   [1, 1, 0],
   [0, 0, 0]]
   4. encoder-decoder attention:
-  If the source sequence is 'I like <pad>'
+  If the source sequence is 'I like [pad]'
   The attention is:
   [[1, 1, 0],
   [1, 1, 0],
