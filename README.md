@@ -23,14 +23,14 @@ or
   such as: I like <pad>.
   self-attention mask is :
   1 1 0
-	1 1 0
-	0 0 0
+  1 1 0
+  0 0 0
   3. decoder masked attention is a square matric = padding mask & low-triangle matric
   such as: I like <pad>.
   low-triangle:
   1 0 0
-	1 1 0
-	1 1 1
+  1 1 0
+  1 1 1
   padding mask:
   1
   1
